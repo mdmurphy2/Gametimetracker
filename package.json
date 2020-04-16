@@ -4,6 +4,8 @@
     "description": "Tracks time spent in games",
     "main": "bot.js",
     "author": "Matthew Murphy & Caleb Floyd",
-    "dependencies": {}
-
+    "dependencies": {
+        "discord.io": "^2.5.3",
+        "winston": "^3.2.1"
+    }
 }
