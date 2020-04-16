@@ -1,0 +1,9 @@
+{
+    "name": "gametime-bot",
+    "version": "1.0.0",
+    "description": "Tracks time spent in games",
+    "main": "bot.js",
+    "author": "Matthew Murphy & Caleb Floyd",
+    "dependencies": {}
+
+}
