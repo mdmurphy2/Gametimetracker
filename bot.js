@@ -11,7 +11,14 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('pong');
+    let author = new Discord.User(client, msg.author);
+    console.log(author.presence);
+    msg.reply(author.presence);
   }
+});
+
+client.on('presenceUpdate', (oldMember, newMember) => {
+  console.log(oldMember, newMember);
 });
 
 client.login(auth.token);
