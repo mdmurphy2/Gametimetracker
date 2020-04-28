@@ -15,10 +15,29 @@ client.on('message', msg => {
     console.log(author.presence);
     msg.reply(author.presence);
   }
+
+  if(msg.content.toLowerCase() ==='!currentgame') {
+    replyCurrentGame(msg);
+  }
 });
+
 
 client.on('presenceUpdate', (oldMember, newMember) => {
-  console.log(oldMember, newMember);
+  console.log('------------PRESENCEUPDATE-------------');
+  console.log(oldMember);
+  console.log('------------PRESENCEUPDATE-------------');
+
 });
 
+
 client.login(auth.token);
+
+
+
+function replyCurrentGame(msg) {
+  let author = new Discord.User(client, msg.author);
+  let currentGame = author.presence.activities;
+  console.log('------------ACTIVITIES-------------');
+  console.log(currentGame);
+  console.log('------------ACTIVITIES-------------');
+}
